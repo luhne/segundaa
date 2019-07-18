@@ -441,3 +441,40 @@ axis(1, at=1:5, labels=d2$name)
 arrows(x0=1:5,
        y0=d2$value+d2$sd,
        y1=d2$value-d2$sd, angle=90, length=0.05, code=3)
+
+#incluindo zotero ou mendley no mardown
+#[_sensu_ @ chave de citação
+
+
+#exercicio aula - desafio
+
+data("iris")
+head(iris)
+
+sp1 <- lm(iris$Sepal.Length ~ iris$Sepal.Width)
+sp2 <- lm(iris$Petal.Length ~ iris$Petal.Width)
+sp3 <- lm(iris$y3 ~ iris$x3)
+sp4 <- lm(iris$y4 ~ iris$x4)
+
+m1 <- lm (y1 ~x1, data= anscombe)
+
+
+mlista <- liste(sp1, sp2, p1, p2)
+mlista[[1]]
+summary(mlist[[1]])
+coef(mlist[[1]])
+
+mlis
+
+# funcao par para definir as configuracoes da janela grafica entre em ?par
+par(mfrow=c(1,3), #abre uma janela gráfica com 2 linhas  e 2 colunas
+    las=1, # deixa as legendas dos eixos na vertical
+    bty="l") # tipo do box do grafico em L
+plot(iris$Sepal.Length ~ iris$Sepal.Width) #plot das variaveis
+abline(mlist[[1]]) # adicionando a reta prevista pelo modelo de regressao
+plot(iris$Petal.Length~ iris$Petal.Width)
+abline(mlist[[2]])
+plot(iris$y2 ~ iris$x3)
+abline(mlist[[3]])
+plot(iris$y3 ~ iris$x4)
+abline(mlist[[4]])
