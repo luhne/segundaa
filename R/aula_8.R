@@ -92,6 +92,8 @@ wastereosn1 <- westeros[westeros$ClaimedBy == "Stark",]
 
 # ==== Exportando um shape ====
 
+#precisa ser criado um dataframe com o nome do objeto!
+
 westeros$political <- NULL
 westeros
 
