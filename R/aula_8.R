@@ -92,9 +92,12 @@ wastereosn1 <- westeros[westeros$ClaimedBy == "Stark",]
 
 # ==== Exportando um shape ====
 
+westeros$political <- NULL
+westeros
+
 writeOGR(
-    westeros_contorno, westeros_contorno$n1,   #nome do objeto a ser salvo
-    dsn = "./RESULTS/meushape", #diretorio a serem salvos os resultados
+    westeros,   #nome do objeto a ser salvo
+    dsn = "./DATA/westeros", #diretorio a serem salvos os resultados
     layer = "westeros_contorno", #nome do arquivo
     driver = "ESRI Shapefile" #formato pretendido para exportação
 )
